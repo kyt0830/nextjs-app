@@ -18,7 +18,7 @@ export function Controls() {
             const options = { //전송할 방식
               method: 'DELETE'
             }
-            fetch(`http://localhost:9999/topics/${id}`, options)
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}topics/${id}`, options)
               .then()
               .then(() => {
                 router.push(`/`);
